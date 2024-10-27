@@ -19,7 +19,7 @@ huggingface-hub
 # for Image utils
 imagesize
 # For logging
-rich==13.7.0
+rich
 # for T5XXL tokenizer (SD3/FLUX)
 sentencepiece
 # for kohya_ss library
