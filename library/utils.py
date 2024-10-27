@@ -58,6 +58,8 @@ def setup_logging(args=None, log_level=None, reset=False):
     else:
         handler = None
         if not args or not args.console_log_simple:
+            msg_init = "rich is not installed, using basic logging"
+            '''
             try:
                 from rich.logging import RichHandler
                 from rich.console import Console
@@ -67,7 +69,7 @@ def setup_logging(args=None, log_level=None, reset=False):
             except ImportError:
                 # print("rich is not installed, using basic logging")
                 msg_init = "rich is not installed, using basic logging"
-
+            '''
         if handler is None:
             handler = logging.StreamHandler(sys.stdout)  # same as print
             handler.propagate = False
